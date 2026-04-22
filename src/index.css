@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Sleek Interface Colors */
+  --color-allstate-primary: #0033A0;
+  --color-allstate-border: #0056D2;
+  --color-sleek-bg: #F0F2F5;
+  --color-sleek-ink: #1A202C;
+  --color-sleek-muted: #718096;
+  --color-sleek-subtitle: #4A5568;
+  
+  --color-pill-a-bg: #C6F6D5;
+  --color-pill-a-text: #22543D;
+  --color-pill-b-bg: #F0FFF4;
+  --color-pill-b-text: #2F855A;
+  --color-pill-c-bg: #FEFCBF;
+  --color-pill-c-text: #744210;
+  --color-pill-f-bg: #FFF5F5;
+  --color-pill-f-text: #C53030;
+  
+  --color-insight-bg: #EBF4FF;
+  --color-insight-border: #3182CE;
+  --color-ids-bg: #FFF5F5;
+  --color-ids-border: #E53E3E;
+}
+
+@layer base {
+  body {
+    @apply bg-sleek-bg text-sleek-ink font-sans antialiased;
+  }
+}
+
+@layer components {
+  .sleek-card {
+    @apply bg-white border-0 rounded-xl p-5 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] overflow-hidden relative;
+  }
+  
+  .sleek-input {
+    @apply w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-allstate-primary focus:border-transparent outline-none transition-all;
+  }
+
+  .sleek-grade-pill {
+    @apply px-3 py-1 rounded-full font-bold text-xs inline-block;
+  }
+}
